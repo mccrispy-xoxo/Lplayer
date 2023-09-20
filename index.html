@@ -1,38 +1,11 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>数字滚动效果</title>
-<style>
-#number {
-font-size: 50px;
-text-align: center;
-padding: 50px;
-border: 2px solid black;
-cursor: pointer;
-}
-</style>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <div id="number">1</div>
-<script>
-var number = document.getElementById("number");
-var currentNumber = 1;
-number.addEventListener("wheel", function(event) {
-event.preventDefault();
-if (event.deltaY < 0) {
-currentNumber--;
-} else {
-currentNumber++;
-}
-if (currentNumber < 1) {
-currentNumber = 9;
-}
-if (currentNumber > 9) {
-currentNumber = 1;
-}
-number.innerHTML = currentNumber;
-});
-</script>
+<script src="./script.js"></script>
 </body>
 </html>
